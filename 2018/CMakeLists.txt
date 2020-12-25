@@ -1,0 +1,12 @@
+cmake_minimum_required (VERSION 2.6)
+set(CMAKE_BUILD_TYPE DEBUG)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+project (xmas2018)
+file(GLOB_RECURSE SRCSAPP ./*.cpp)
+file(GLOB_RECURSE SRCSLIB ./*.h)
+add_executable( ${PROJECT_NAME}
+ ${SRCSAPP}
+ ${SRCSLIB}
+ )
